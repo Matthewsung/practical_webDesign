@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    box-sizing: border-box;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+.wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background: #ddd;
+}
+.logo{
+    width:200px;
+    height: 40px;
+    margin: 30px 0 ;
+    float: left;
+}
+.menu_ul{
+    float: right;
+    position:relative;
+}
+.menu_li{
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 20px;
+    text-align: center;
+    
+    float: left;
+}
+.menu_li_act{
+    background: #000;
+    color: #fff;
+}
+.sub_menu{
+    width: 800px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transition: all 0.5s;
+    opacity: 0;
+    
+}
+.sub_menu_act{
+    opacity: 1;
+    z-index: 9
+}
+.sub_ul{
+    overflow: hidden;
+    box-shadow: 0 0 0 2px ;
+}
+.sub_li{
+    width: 200px;
+    text-align: center;
+    float: left;
+}
+.sub_li_act{
+    background: #000;
+    color:#fff;
+}
+.sub_li div{
+    padding: 15px;
+}
+/*메인*/
+/*배너*/
+
+.banner_box{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.banner{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+.banner img{
+    width: 100%;
+}
+.banner:nth-child(1){
+    top: 0;
+}
+.banner h1{
+    font-size: 50px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+/*content_box*/
+.content_box{
+    width: 100%; 
+    height: 200px;
+}
+.content{
+    width: calc(100%/3);
+    height: 100%;
+    float: left;
+}
+.title_box{
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+}
+.title{
+    padding: 8px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    
+    border: 1px solid #000;
+    background: #ccc;
+/*    box-sizing: border-box;*/
+    float: left;
+}
+.title_act{
+    background: #fff;
+    border-bottom: 1px solid #fff;
+}
+.container{
+    width: 100%;
+    padding-bottom: 38%;
+    box-shadow: 0 0 0 1px ;
+    position: relative;
+}
+.container_item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.container_item_act{
+    display: block;
+    z-index: 9;
+}
+.notice{
+    width: 100%;
+}
+.notice_li{
+    padding: 8px;
+    overflow: hidden;
+    
+}
+.notice_li p{
+    float: left;
+}
+.notice_li span{
+    float: right;
+}
+.gallery{
+    width: 100%;
+    
+}
+.gallery li{
+    width: calc((100% - (10px * 2 * 3)) / 3);
+    margin: 20px 10px;
+    float: left;
+        
+}
+.gallery img{
+    width: 100%;
+}
+
+.sm_banner{
+    background: url(../img/Contents/banner.jpg) no-repeat center / cover;
+}
+.direct{
+    background: url(../img/Contents/direct.jpg) no-repeat center / cover;
+}
+
+/*footer*/
+
+.footer {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: #ddd;
+}
+.f_content{
+    text-align: center;
+    float: left;
+}
+.f_logo{
+    width: 200px;
+    margin-top: 15px;
+}
+.f_logo img{
+    width: 100%;
+}
+.f_copy{
+    width: calc(100% - 200px - 250px);
+        
+}
+.sns{
+    width: 250px;
+    height: 100%;
+    float: right;
+}
+.sns div{
+    width:calc((100% - (10px *2) - 0.1px) / 3);
+    height: 100%;
+    margin-right: 10px;
+    float: left;
+}
+.sns div:nth-child(1){
+    background: url(../img/Footer/sns1.jpg) no-repeat center / 50px 50px;
+}
+.sns div:nth-child(2){
+    background: url(../img/Footer/sns2.jpg) no-repeat center / 50px 50px;
+}
+.sns div:nth-child(3){
+    background: url(../img/Footer/sns3.jpg) no-repeat center / 50px 50px;
+    margin-right: 0;
+}
+/*모달 창*/
+.pan{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: none;
+}
+.pan_act{
+    display: block;
+    
+}
+.modal{
+    width: 500px;
+    background: #fff;
+    box-shadow: 0 0 0 1px #000;
+    padding: 10px;
+    position: absolute;
+    left: 50%; 
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9;
+    display: none;
+}
+.modal_act{
+    display: block;
+}
+.m_title{
+    width: 100%;    
+}
+.m_content{
+    margin-top: 10px;
+}
+.m_close{
+    padding: 5px 10px;
+    border: 1px solid #000;
+    float: right;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
